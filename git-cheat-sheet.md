@@ -22,6 +22,9 @@ $ git clone [remote repository URL]
 ```
 
 ### 差分表示 (diff)
+
+![図1. リポジトリ内の構造](rep-internal.png)
+
 ローカルリポジトリのワークツリー(work tree)に加えた変更とインデックス(index)の差分を表示する
 ```
 $ git diff
