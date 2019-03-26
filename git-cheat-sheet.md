@@ -2,6 +2,7 @@
 
 ## ツール初期設定
 
+### ユーザ関連の設定 (user)
 ユーザ名を設定（全リポジトリ共通） (user.name)
 ```
 $ git config --global user.name "[name]"
@@ -10,6 +11,14 @@ $ git config --global user.name "[name]"
 emailアドレスを設定（全リポジトリ共通） (user.email)
 ```
 $ git config --global user.email "[email address]"
+```
+
+### トラッキングの制限 (.gitigunore)
+`.gitignore`ファイルを作成して、トラッキングしないファイル名のパターンをテキストで記述しておく
+
+```
+*~      # 末尾に~が付くemacsのバックアップファイルは無視
+*.swp   # vimのswapファイルも無視
 ```
 
 
