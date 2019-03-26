@@ -15,12 +15,26 @@ $ git config --global user.email "[email address]"
 
 ## 通常運用で使用するコマンド
 
-リモートリポジトリからローカルにリポジトリを複製 (clone)
+### 複製作成 (clone)
+リモートリポジトリからローカルにリポジトリを複製
 ```
 $ git clone [remote repository URL]
 ```
 
-現在のローカルリポジトリの状態取得 (status)
+### 差分表示 (diff)
+ローカルリポジトリのワークツリー(work tree)に加えた変更とインデックス(index)の差分を表示する
+```
+$ git diff
+```
+
+ローカルリポジトリのワークツリーと現在のコミットの先頭(HEAD)を比較し差分を表示する
+```
+$ git diff HEAD
+```
+
+
+### 状態表示 (status)
+現在のローカルリポジトリの状態取得
 ```
 $ git status
 On branch master
@@ -33,19 +47,5 @@ Untracked files:
 	git-cheat-sheet.md
 
 nothing added to commit but untracked files present (use "git add" to track)
-$ 
-```
-
-```
-$ git status
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   git-cheat-sheet.md
-
 $ 
 ```
