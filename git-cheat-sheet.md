@@ -44,7 +44,6 @@ $ git diff
 $ git diff HEAD
 ```
 
-
 ### 状態表示 (status)
 現在のローカルリポジトリの状態取得
 ```
@@ -62,22 +61,27 @@ nothing added to commit but untracked files present (use "git add" to track)
 $ 
 ```
 
+### 変更ファイルのステージング (add)
+ステージングとは、ワークツリーにのファイルに加えた変更、新規のファイル追加、トラッキング中のファイルを削除した場合に、その変更をインデックスに反映すること。
+
+ファイル名を指定してステージングを行う
+```
+$ git add [file]
+```
+
+トラッキング中の全てのファイルに加えた変更をステージングする。新規のファイルやファイルを削除した場合はステージングされない。
+```
+$ git add -u
+```
+
+全てのファイルをステージング行う。ゴミファイルなどもステージングされる可能性があるので注意。`.gitignore`ファイルでトラッキングしたくないファイルは指定しておいたほうが良い。
+```
+$ git add -A
+```
+
+
 ### 履歴の表示 (log)
-リポジトリへの変更履歴を表示する
+リポジトリへの変更履歴を表示する。
 ```
 $ git log
-commit 15327233dfb31c1a0b8f069100d249e322f2b94a (HEAD -> master)
-Author: Kaname <kaname.g@gmail.com>
-Date:   Wed Mar 27 01:43:13 2019 +0900
-
-    レポジトリの構造の図を追加
-    
-    図を追加したのとPNGファイルを追加した
-
-commit cd20cb50d10bac41c1e1c06e11a6829a78526dae (origin/master, origin/HEAD)
-Author: Kaname <kaname.g@gmail.com>
-Date:   Wed Mar 27 00:51:56 2019 +0900
-
-    git diff HEADの項目
-
 ```
