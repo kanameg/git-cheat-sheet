@@ -53,7 +53,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 $ 
 ```
 
-## 履歴の表示 (log)
+### 履歴の表示 (log)
 リポジトリへの変更履歴を表示する
 ```
 $ git log
