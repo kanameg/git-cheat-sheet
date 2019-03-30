@@ -121,6 +121,21 @@ $ git push
 ```
 リモートがすでに他の人にプッシュして更新されている場合、`push`に失敗します。失敗した場合は、一度`pull`してマージ`merge`しローカルのレポジトリを最新にする必要があります。
 
+```
+$ git pull
+remote: Enumerating objects: 37, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 33 (delta 22), reused 29 (delta 18), pack-reused 0
+Unpacking objects: 100% (33/33), done.
+From https://github.com/kanameg/git-cheat-sheet
+   1d99e22..2f2246a  master     -> origin/master
+Updating 1d99e22..2f2246a
+Fast-forward
+ git-cheat-sheet.md | 84 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 65 insertions(+), 19 deletions(-)
+$ 
+```
 
 ### 履歴の表示 (log)
 リポジトリへの変更履歴を表示する。
