@@ -1,3 +1,3 @@
-*~         # 末尾に~が付くemacsのバックアップファイルは無視
-*.swp      # vimのswapファイルも無視
-.DS_Store  # macのプレビューファイル
+*~
+*.swp
+.DS_Store
