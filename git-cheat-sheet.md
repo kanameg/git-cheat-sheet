@@ -5,17 +5,19 @@
 ## ツール初期設定
 
 ### ユーザ関連の設定 (user)
-ユーザ名を設定（全リポジトリ共通） (user.name)
+ユーザ名を設定（全リポジトリ共通）
+`user.name`にユーザ名を設定
 ```
 $ git config --global user.name "[name]"
 ```
 
-emailアドレスを設定（全リポジトリ共通） (user.email)
+emailアドレスを設定（全リポジトリ共通）
+`user.email`にe-mailアドレスを設定
 ```
 $ git config --global user.email "[email address]"
 ```
 
-### トラッキングの制限 (.gitigunore)
+### トラッキングの制限
 `.gitignore`ファイルを作成して、トラッキングしないファイル名のパターンをテキストで記述しておくことができます。
 
 ```
