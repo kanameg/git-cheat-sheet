@@ -258,7 +258,40 @@ $ git reset --hard [commit]    # masterのブランチを[commit]まで戻す
 
 --------------------------------------------------------------------------------------------------
 
-## Git Flowの使い方
+## git-flowの使い方
+
+### git-flowの初期化
+
+以下のコマンドでGit Flowに必要なブランチが自動的に生成されます。
+`develop`が生成され、`feature/XXXXX`、`release/XXXXX`などのブランチ作成時に使用されるprefix名を決めます。設定後はブランチは`develop`に勝手に移行します。
+リモートがある場合は、作成したブランチを全部プッシュしておきます。
+```
+$ git flow init -d
+$ git branch
+* develop
+  master
+$ git push --all
+```
+
+### 新機能を作成する (feature start)
+新機能を作成するために、`feature/[function-name]`ブランチを作成します。自動的に`feature/[function-name]`にブランチが切り替わります。
+```
+$ git flow feature start [function-name]
+$ git branch
+  develop
+* feature/[function-name]
+  master
+```
+
+途中のコミットやブランチの切り替えなどは、通常のgitのコマンドと同じです。
+`git commit`や`git branch`、`git checkout`などを使って作業を進めます。
+
+### 新機能の作成完了( (feature finish)
+新機能の作成が完了したら、`feature/[function-name]`にコミットしていった記録を`develop`にマージします。`git flow`のコマンドを使用すると自動的にマージされます。
+```
+$ git flow feature finish [function-name]
+$ git branch
+```
 
 --------------------------------------------------------------------------------------------------
 
