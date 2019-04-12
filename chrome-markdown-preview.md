@@ -12,7 +12,7 @@ Chromeで以下のページにアクセスし拡張機能をインストール�
 
 ## 2. "Markdown Preview Plus"を設定
 
-以下のURLにアクセスし拡張機能の設定を行います。
+インストールが完了したら、以下のURLにアクセスし拡張機能の設定を行います。
 
 [拡張機能](chrome://extensions)
 
@@ -21,17 +21,20 @@ Chromeで以下のページにアクセスし拡張機能をインストール�
 
 ![](markdown-preview-plus-02.png)
 
-拡張機能のオプションを選択し、オプション画面で以下のように設定を行う。x
+拡張機能のオプションを選択し、オプション画面で以下のように設定を行います。
 
 * "Enable auto-reload"にチェックを入れる
-* "This CSS applies Live Preview."を"Github"に設定
+  markdownファイルを変更したときも定期的にリロードし再表示します
+* "This CSS applies Live Preview."を"Github"に設定（お好みで良い）
 * "Supported file extensions"の"txt"と"text"のチェックを外す
+  テキストファイルはmarkdownではないため
 
 ![](markdown-preview-plus-03.png)
 ![](markdown-preview-plus-04.png)
+
+設定完了です。
 
 ---
 
 ## 3. 使い方
 markdownのファイル(拡張子がmd)をブラウザにドラッグ&ドロップ等で開くとPreviewを確認することが出来ます。
-
