@@ -37,9 +37,9 @@ $ git flow feature publish [feature-name]
 Total 0 (delta 0), reused 0 (delta 0)
 remote: 
 remote: Create a pull request for 'feature/[feature-name]' on GitHub by visiting:
-remote:      https://github.com/kanameg/how-to-use/pull/new/feature/[feature-name]
+remote:      https://[remote-repository-url]/pull/new/feature/[feature-name]
 remote: 
-To https://github.com/kanameg/how-to-use.git
+To https://[remote-repository-url]
  * [new branch]      feature/[feature-name] -> feature/[feature-name]
 Already on 'feature/[feature-name]'
 Your branch is up to date with 'origin/feature/[feature-name]'.
@@ -51,3 +51,20 @@ Summary of actions:
 
 $ 
 ```
+
+## featureブランチの終了
+機能を追加してながらコミットを行っていき、機能の作成が完了するとブランチでの作業を終了して`develop`ブランチにマージします。
+
+コミットを完了した状態で以下のコマンドを実行して`develop`ブランチにマージを実行します。
+```
+$ git flow feature finish -k [feature-name]
+```
+`develop`ブランチが成長済だとコンフリクトが発生する場合があるので、その場合はコンフリクトの発生したファイルをエディタで解決し、再度コマンドを実行します。
+
+コマンドが完了して正しくマージが完了していれば、自動的に`develop`ブランチに切り替わるので、プッシュを行いリモートに適用します。
+```
+$ git push
+```
+
+
+
