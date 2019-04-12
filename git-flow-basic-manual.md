@@ -1,7 +1,19 @@
+# git flow 簡易マニュアル
+![](git-flow-logo.png)
+
+## リポジトリの取得とgit flowの開始
+
+リモートからリポジトリを取得してgit flowを利用できるように設定します。
+```
+$ git clone [repository-URL]
+
+$ git flow init -d
+```
+
 
 ## featureブランチの開始
 
-追加機能を開発するために、新たなブランチを開始します。
+追加機能を開発するために、新たなブランチを開始します。このコマンドにより`develop`ブランチから`feature/[feature-name]`ブランチが作成され、`feature/[feature-name]`ブランチに切り替わります。
 
 ```
 $ git flow feature start [feature-name]
@@ -18,7 +30,7 @@ Now, start committing on your feature. When done, use:
 $ 
 ```
 
-作ったブランチは、他人と共用できるようにリモートへプッシュします。初回だけでOK。
+ブランチ作成後は、他人と共用できるようにリモートへプッシュしておくと便利です。※初回だけでOK
 
 ```
 $ git flow feature publish [feature-name]
