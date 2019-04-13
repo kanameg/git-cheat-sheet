@@ -26,19 +26,19 @@ $ git flow init -d
 
 ## 機能追加の開始
 
-既存のレポジトリに機能を追加するために、featureブランチという新たなブランチを作成します。このコマンドにより`develop`ブランチから`feature/[feature-name]`ブランチが作成され、`feature/[feature-name]`ブランチに切り替わります。
+既存のレポジトリに機能を追加するために、featureブランチという新たなブランチを作成します。このコマンドにより`develop`ブランチから`feature/[function-name]`ブランチが作成され、`feature/[function-name]`ブランチに切り替わります。
 
 ```
-$ git flow feature start [feature-name]
-Switched to a new branch 'feature/[feature-name]'
+$ git flow feature start [function-name]
+Switched to a new branch 'feature/[function-name]'
 
 Summary of actions:
-- A new branch 'feature/[feature-name]' was created, based on 'develop'
-- You are now on branch 'feature/[feature-name]'
+- A new branch 'feature/[function-name]' was created, based on 'develop'
+- You are now on branch 'feature/[function-name]'
 
 Now, start committing on your feature. When done, use:
 
-     git flow feature finish [feature-name]
+     git flow feature finish [function-name]
 
 $ 
 ```
@@ -46,21 +46,21 @@ $
 ブランチ作成後は、他人と共用できるようにリモートへプッシュしておくと便利です。※初回だけでOK
 
 ```
-$ git flow feature publish [feature-name]
+$ git flow feature publish [function-name]
 Total 0 (delta 0), reused 0 (delta 0)
 remote: 
-remote: Create a pull request for 'feature/[feature-name]' on GitHub by visiting:
-remote:      https://[remote-repository-url]/pull/new/feature/[feature-name]
+remote: Create a pull request for 'feature/[function-name]' on GitHub by visiting:
+remote:      https://[remote-repository-url]/pull/new/feature/[function-name]
 remote: 
 To https://[remote-repository-url]
- * [new branch]      feature/[feature-name] -> feature/[feature-name]
-Already on 'feature/[feature-name]'
-Your branch is up to date with 'origin/feature/[feature-name]'.
+ * [new branch]      feature/[function-name] -> feature/[function-name]
+Already on 'feature/[function-name]'
+Your branch is up to date with 'origin/feature/[function-name]'.
 
 Summary of actions:
-- A new remote branch 'feature/[feature-name]' was created
-- The local branch 'feature/[feature-name]' was configured to track the remote branch
-- You are now on branch 'feature/[feature-name]'
+- A new remote branch 'feature/[function-name]' was created
+- The local branch 'feature/[function-name]' was configured to track the remote branch
+- You are now on branch 'feature/[function-name]'
 
 $ 
 ```
@@ -70,7 +70,7 @@ featureブランチで機能を追加しながらコミットをしていきま�
 
 コミットを完了した状態で以下のコマンドを実行して`develop`ブランチにマージを実行します。
 ```
-$ git flow feature finish -k [feature-name]
+$ git flow feature finish -k [function-name]
 ```
 `-k`オプションをつけると、`feature/[function-name]`ブランチは削除されず維持されます。
 
@@ -83,7 +83,7 @@ $ git push
 ```
 
 ## 他の作業者との共同開発
-追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発します。（ただしこの場合も同じファイルを編集するとマージするさいにコンフリクトが発生します。同時に編集するファイルは分けるべきです） featureブランチを作成したときにプッシュしたリモートのブランチをクローンし**git flow**の設定を実行を行います。その後`feature/[feature-name]`を取り出して（トラッキング）して作業を開始します。
+追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発します。（ただしこの場合も同じファイルを編集するとマージするさいにコンフリクトが発生します。同時に編集するファイルは分けるべきです） featureブランチを作成したときにプッシュしたリモートのブランチをクローンし**git flow**の設定を実行を行います。その後`feature/[function-name]`を取り出して（トラッキング）して作業を開始します。
 ```
 $ git clone [repository-URL]
 $ git flow init -d
