@@ -14,7 +14,7 @@ git flowでは以下のようなブランチが作成され運用される。
 
 
 ブランチ間のマージとブランチ作成は概ね以下のように運用される。
-![](git-flow-overview.png)
+![](img/git-flow-overview.png)
 
 
 ## リポジトリの取得とgit flowの開始
