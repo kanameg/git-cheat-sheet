@@ -6,7 +6,7 @@ Chromeで以下のページにアクセスし拡張機能をインストール�
 
 [Markdown Preview](https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl?hl=ja)
 
-![](markdown-preview-plus-01.png)
+![](img/markdown-preview-plus-01.png)
 
 ---
 
@@ -19,7 +19,7 @@ Chromeで以下のページにアクセスし拡張機能をインストール�
 "Markdown Preview Plus"の"詳細"ボタンを押して拡張機能の設定ページに移動し、
 "ファイルのURLへのアクセスを許可する"を"ON"に設定します。
 
-![](markdown-preview-plus-02.png)
+![](img/markdown-preview-plus-02.png)
 
 拡張機能のオプションを選択し、オプション画面で以下のように設定を行います。
 
@@ -29,8 +29,8 @@ Chromeで以下のページにアクセスし拡張機能をインストール�
 * "Supported file extensions"の"txt"と"text"のチェックを外す
   テキストファイルはmarkdownではないため
 
-![](markdown-preview-plus-03.png)
-![](markdown-preview-plus-04.png)
+![](img/markdown-preview-plus-03.png)
+![](img/markdown-preview-plus-04.png)
 
 設定完了です。
 
