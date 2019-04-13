@@ -8,25 +8,28 @@ git flowでは以下のようなブランチが作成され運用される。
 | develop          | 開発者が利用する共通ブランチ 最新の機能が全てマージされている   |
 | master           | リリース後の最新ブランチ リリースされたバージョンが管理される   | 
 | feature/FUNCTION | developブランチに対して機能FUNCTIONが開発されているブランチ     |
-| hotfix/BUG       | masterブランチに対しての緊急バグBUGが修正されているブランチ     |
+| hotfix/BUG       | masterブランチに対しての緊急バグBUGを修正するためのブランチ     |
 | release/RELEASE  | developからmasterにRELEASEとしてリリースするためのブランチ      |
 |                  |                                                                 |
 
+
+ブランチ間のマージとブランチ作成は概ね以下のように運用される。
+![](git-flow-overview.png)
 
 
 ## リポジトリの取得とgit flowの開始
 
 リモートからリポジトリを取得して**git flow**を利用できるように設定します。
 ```
-$ git clone [repository-URL]
+$ git clone [repository-url]
 
 $ git flow init -d
 ```
 
 
 ## 機能追加の開始
-
-既存のレポジトリに機能を追加するために、featureブランチという新たなブランチを作成します。このコマンドにより`develop`ブランチから`feature/[function-name]`ブランチが作成され、`feature/[function-name]`ブランチに切り替わります。
+### `git flow feature start`
+developレポジトリに機能を追加するために、featureブランチという新たなブランチを作成します。このコマンドにより`develop`ブランチから`feature/[function-name]`ブランチが作成され、`feature/[function-name]`ブランチに切り替わります。
 
 ```
 $ git flow feature start [function-name]
@@ -43,7 +46,8 @@ Now, start committing on your feature. When done, use:
 $ 
 ```
 
-ブランチ作成後は、他人と共用できるようにリモートへプッシュしておくと便利です。※初回だけでOK
+### `git flow feature publish`
+featureブランチ作成後は、他人と共用できるようにリモートへプッシュしておくと便利です。※初回だけでOK
 
 ```
 $ git flow feature publish [function-name]
@@ -66,6 +70,7 @@ $
 ```
 
 ## 機能追加の完了
+### `git flow feature finish`
 featureブランチで機能を追加しながらコミットをしていきます。機能の作成とテストが完了するとブランチでの作業を終了して`develop`ブランチにマージします。
 
 コミットを完了した状態で以下のコマンドを実行して`develop`ブランチにマージを実行します。
@@ -83,7 +88,8 @@ $ git push
 ```
 
 ## 他の作業者との共同開発
-追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発します。（ただしこの場合も同じファイルを編集するとマージするさいにコンフリクトが発生します。同時に編集するファイルは分けるべきです） featureブランチを作成したときにプッシュしたリモートのブランチをクローンし**git flow**の設定を実行を行います。その後`feature/[function-name]`を取り出して（トラッキング）して作業を開始します。
+### `git flow feature track`
+追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発が可能です。（この場合同じファイルを編集するとマージするさいにコンフリクトが発生します。同時に編集するファイルは分けるべきです） リモートをクローンし**git flow**の設定を行います。その後`feature/[function-name]`を取り出して（トラッキング）して作業を開始します。
 ```
 $ git clone [repository-URL]
 $ git flow init -d
@@ -106,6 +112,7 @@ $ git branch
   master
 ```
 
+### `git flow feature pull origin`
 共同作業者によりリモートが修正されている場合は、リモートからプルを行いローカルを最新化することができます。
 
 ```
