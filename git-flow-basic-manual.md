@@ -59,6 +59,7 @@ $
 ```
 $ git flow feature finish -k [feature-name]
 ```
+
 `develop`ブランチが成長済だとコンフリクトが発生する場合があるので、その場合はコンフリクトの発生したファイルをエディタで解決し、再度コマンドを実行します。
 
 コマンドが完了して正しくマージが完了していれば、自動的に`develop`ブランチに切り替わるので、プッシュを行いリモートに適用します。
@@ -66,5 +67,35 @@ $ git flow feature finish -k [feature-name]
 $ git push
 ```
 
+## 共同作業者がfeatureブランチで作業
+プッシュしたリモートのブランチを使って、共同作業者が編集作業を行うことも可能です。
+その場合は、クローンを実行後git-flowを設定し、`feature/[feature-name]`を取り出して作業を開始します。
+```
+$ git clone [repository-URL]
+$ git flow init -d
 
+$ git branch
+* develop  ← feature/[function-name]がない!
+  master
+  
+$ git flow feature track [function-name]
+Branch 'feature/[function-name]' set up to track remote branch 'feature/[function-name]' from 'origin'.
+Switched to a new branch 'feature/[function-name]'
 
+Summary of actions:
+- A new remote tracking branch 'feature/[function-name]' was created
+- You are now on branch 'feature/[function-name]'
+
+$ git branch
+  develop
+* feature/[function-name]  ← feature/[function-name]が持ってこられた!
+  master
+```
+
+共同作業者によりリモートが修正されている場合は、プルを行いローカルを最新化することができます。
+
+```
+$ git flow feature pull origin
+Pulled origin's changes into feature/[function-name].
+$ 
+```
