@@ -99,7 +99,7 @@ $ git push
 ```
 $ git clone [repository-URL]
 $ git flow init -d
-# git pull origin develop    ← リモートとdevelopブランチ同期する
+$ git pull origin develop    ← リモートとdevelopブランチ同期する
 
 $ git branch
 * develop  ← feature/[function-name]がない!
