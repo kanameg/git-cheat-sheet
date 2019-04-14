@@ -14,3 +14,17 @@ $ git pull
 リモートレポジトリからローカルにプルを行い、他作業者のリモートへの変更をマージします。
 変更がかぶった場合コンフリクトが発生するので、コンフリクトを解決する必要があります。
 
+
+
+```
+$ git pull <remote> <branch>
+```
+リモートレポジトリ`origin`から`develop`ブランチをぷるしてくる場合は
+```
+$ git pull origin develop
+From https://[remote-repository-url]
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+$ 
+```
+のようになります。
