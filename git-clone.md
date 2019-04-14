@@ -4,7 +4,7 @@
 gitコマンドのクーロンを使ってリモートのレポジトリから自分の作業領域に複製を作成します。
 
 ```
-$ git clone <REMOTE-REPOSITORY-URL>
+$ git clone <remote-repository-url>
 ```
 
 ![](img/git-clone.png)
@@ -16,6 +16,5 @@ $ git clone <REMOTE-REPOSITORY-URL>
 
 また、複製を作成するディレクトリを指定して複製することも可能です。
 ```
-$ git clone <REMOTE-REPOSITORY-URL> <DIRECTORY>
+$ git clone <remote-repository-url> <directory>
 ```
-
