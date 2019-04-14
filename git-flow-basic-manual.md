@@ -46,6 +46,7 @@ Now, start committing on your feature. When done, use:
 $ 
 ```
 
+## リモートへのブランチ公開
 ### `git flow feature publish`
 featureブランチ作成後は、他人と共用できるようにリモートへプッシュしておくと便利です。※初回だけでOK
 
@@ -89,7 +90,7 @@ $ git push
 
 ## 他の作業者との共同開発
 ### `git flow feature track`
-追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発が可能です。（この場合同じファイルを編集するとマージするさいにコンフリクトが発生します。同時に編集するファイルは分けるべきです） リモートをクローンし**git flow**の設定を行います。その後`feature/[function-name]`を取り出して（トラッキング）して作業を開始します。
+もし追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発が可能です。リモートをクローンし**git flow**の設定を行います。その後`feature/[function-name]`を取り出して（トラッキング）して作業を開始します。
 ```
 $ git clone [repository-URL]
 $ git flow init -d
@@ -120,3 +121,10 @@ $ git flow feature pull origin
 Pulled origin's changes into feature/[function-name].
 $ 
 ```
+
+## 全体の流れ
+作業の全体の流れとしては以下の図のような流れになります。
+
+![](img/git-flow-op-flow.png)
+
+
