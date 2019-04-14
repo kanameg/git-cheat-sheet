@@ -4,7 +4,7 @@
 # 内容
 各種ツールの使い方をまとめたレポジトリ
 * Git
-* Rocket Chat
+* git flow
 
 # レビジョン
-V01L01C01
+V01L02C01
