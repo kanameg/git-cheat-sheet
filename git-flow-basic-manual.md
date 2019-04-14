@@ -1,5 +1,6 @@
 # git flow 簡易マニュアル  ![](git-flow-logo.png)
 
+
 ## git flowのブランチ構成
 git flowでは以下のようなブランチが作成され運用される。
 
@@ -18,13 +19,14 @@ git flowでは以下のようなブランチが作成され運用される。
 
 
 ## リポジトリの取得とgit flowの開始
-
 リモートからリポジトリを取得して**git flow**を利用できるように設定します。
+
 ```
 $ git clone [repository-url]
-
 $ git flow init -d
 ```
+
+`master`ブランチから`develop`ブランチが生成されます。
 
 
 ## 機能追加の開始
@@ -45,6 +47,7 @@ Now, start committing on your feature. When done, use:
 
 $ 
 ```
+
 
 ## リモートへのブランチ公開
 ### `git flow feature publish`
@@ -88,12 +91,15 @@ $ git flow feature finish -k [function-name]
 $ git push
 ```
 
+
 ## 他の作業者との共同開発
 ### `git flow feature track`
 もし追加する機能を共同作業者と開発する場合は、同じfeatureブランチを共同で使用し開発が可能です。リモートをクローンし**git flow**の設定を行います。その後`feature/[function-name]`を取り出して（トラッキング）して作業を開始します。
+
 ```
 $ git clone [repository-URL]
 $ git flow init -d
+# git pull origin develop    ← リモートとdevelopブランチ同期する
 
 $ git branch
 * develop  ← feature/[function-name]がない!
@@ -122,9 +128,8 @@ Pulled origin's changes into feature/[function-name].
 $ 
 ```
 
+
 ## 全体の流れ
 作業の全体の流れとしては以下の図のような流れになります。
 
 ![](img/git-flow-op-flow.png)
-
-
